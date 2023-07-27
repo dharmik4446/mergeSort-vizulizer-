@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+	initial-scale=1.0">
+    <link rel="stylesheet" href="merge.css">
+</head>
+
+<body style="background-color: black ;">
+    <div class="banner">
+        <div class="navbar">
+            <h1 class="title" style="color:yellow; font:lighter;"> Merge Sort </h1>
+
+
+
+            <!-- <div class="banner" >
+      <div class="navbar"> -->
+
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="code.html">Code</a></li>
+                <li><a href="mergesort.html">Sort</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <canvas id="Canvas"></canvas>
+    <div class="para">
+        <p>
+            <h1>What is Merge Sort?</h1><br>
+            <h2>
+                The merge sort algorithm is an implementation of the divide and conquer technique. Thus, it gets completed in three steps:<br> 1. Divide: In this step, the array/list divides itself recursively into sub-arrays until the base case is reached.<br>                2. Recursively solve: Here, the sub-arrays are sorted using recursion. <br> 3. Combine: This step makes use of the merge( ) function to combine the sub-arrays into the final sorted array. <br> * The merge() function is used for merging
+                two halves. The merge(arr, l, m, r) is a key process that assumes that arr[l..m] and arr[m+1..r] are sorted and merges the two sorted sub-arrays into one.
+
+
+            </h2>
+        </p>
+
+    </div>
+    <img src="mergesort.png" class="mergeimg">
+    <!-- <script src="mergeSort.js"></script> -->
+
+
+    <div class="para">
+        <p>
+            <h1> Algorithm for Merge Sort</h1>
+            <h2>
+                Step 1: Find the middle index of the array. <br> Middle = 1 + (last – first)/2 <br> Step 2: Divide the array from the middle. <br> Step 3: Call merge sort for the first half of the array <br> MergeSort(array, first, middle) <br> Step 4:
+                Call merge sort for the second half of the array. <br> MergeSort(array, middle+1, last) <br> Step 5: Merge the two sorted halves into a single sorted array.
+            </h2>
+        </p>
+    </div>
+</body>
+
+</html>

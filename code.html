@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="code.css" />
+    <link rel="stylesheet" href="merge.css" />
+  </head>
+
+  <body style="background-color: black; color: bisque">
+    <div class="banner">
+      <div class="navbar">
+        <h1 class="title" style="color: yellow; font: lighter">Merge Sort</h1>
+
+        <!-- <div class="banner" >
+        <div class="navbar"> -->
+
+        <ul>
+          <li><a href="merge_sort.html">Home</a></li>
+          <li><a href="#">Code</a></li>
+          <li><a href="sort.html">Sort</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="code">
+      <h2>Merge Sort Code</h2>
+      <code>
+        <br />
+        <br />
+
+        <p>
+          #include stdio.h <br />
+          #include conio.h
+        </p>
+        <br />
+
+        void printArray(int *A, int n)<br />
+        {<br />
+        for (int i = 0; i < n; i++)<br />
+        {<br />
+        printf("%d ", A[i]);<br />
+        }<br />
+        printf("\n");<br />
+        }<br />
+
+        void merge(int A[], int mid, int low, int high)<br />
+        {<br />
+        int i, j, k, B[100];<br />
+        i = low;<br />
+        j = mid + 1;<br />
+        k = low;<br />
+
+        while (i &lt= mid && j &lt= high)<br />
+        {<br />
+        if (A[i] &lt A[j])<br />
+        {<br />
+        B[k] = A[i];<br />
+        i++;<br />
+        k++;<br />
+        }<br />
+        else<br />
+        {<br />
+        B[k] = A[j];<br />
+        j++;<br />
+        k++;<br />
+        }<br />
+        }<br />
+        while (i &lt= mid)<br />
+        {<br />
+        B[k] = A[i];<br />
+        k++;<br />
+        i++;<br />
+        }<br />
+        while (j &lt= high)<br />
+        {<br />
+        B[k] = A[j];<br />
+        k++;<br />
+        j++;<br />
+        }<br />
+        for (int i = low; i &lt= high; i++)<br />
+        {<br />
+        A[i] = B[i];<br />
+        }<br />
+
+        }<br />
+
+        void mergeSort(int A[], int low, int high){<br />
+        int mid; <br />
+        if(low &lt high){<br />
+        mid = (low + high) /2;<br />
+        mergeSort(A, low, mid);<br />
+        mergeSort(A, mid+1, high);<br />
+        merge(A, mid, low, high);<br />
+        }<br />
+        }<br />
+
+        int main()<br />
+        {<br />
+        <!-- int A[] = {9, 14, 4, 8, 7, 5, 6}; -->
+        int A[] = {9, 1, 4, 14, 4, 15, 6};<br />
+        int n = 7;<br />
+        printArray(A, n);<br />
+        mergeSort(A, 0, 6);<br />
+        printArray(A, n);<br />
+        return 0;<br />
+        }<br />
+      </code>
+    </div>
+  </body>
+</html>

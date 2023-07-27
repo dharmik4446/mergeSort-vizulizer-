@@ -1,0 +1,42 @@
+.banner {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url(car1.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.navbar {
+  font-size: 20px;
+  width: 85%;
+  margin: auto;
+  padding: -50px -5px;
+  display: flex;
+  align-items: unset;
+  justify-content: space-between;
+}
+
+.navbar ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 10px 20px;
+  position: relative;
+}
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.navbar ul li::after {
+  content: "";
+  height: 3px;
+  width: 0;
+  background: #f72121;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  transition: 0.75s;
+}
+.navbar ul li:hover::after {
+  width: 100%;
+}
